@@ -2,7 +2,7 @@ terraform {
   required_providers {
     gcp = {
       source  = "hashicorp/google"
-      version = "~> 3.74.0"
+      version = "~> 3.67.0"
     }
   }
   backend "remote" {
@@ -13,6 +13,7 @@ terraform {
     }
   }
 }
+
 provider "google" {
   project     = "skywiz-sandbox"
 }

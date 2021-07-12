@@ -4,7 +4,7 @@ resource "google_compute_instance" "default" {
   machine_type = var.machineType
   zone         = var.zone
   
-  metadata_startup_script = templatefile("./kuma-startup.sh", { kuma-version = var.consulVersion, server = each.key, zone = var.zone })
+  metadata_startup_script = templatefile("./kuma-startup.sh", { kuma-version = var.kumaVersion, server = each.key, zone = var.zone })
   tags = var.networkTags
 
   boot_disk {
